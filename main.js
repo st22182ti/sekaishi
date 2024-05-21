@@ -36,7 +36,7 @@ print_answer.addEventListener("click", () => {
 
 
 window.onload = () => {
-    history.replaceState(null, '', "index.html");
+    history.replaceState(null, '', "index.html?openExternalBrowser=1");
 }
 
 
