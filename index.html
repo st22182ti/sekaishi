@@ -1,103 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="世界史【テスト対策】" />
-        <meta property="og:description" content="世界史" />
-        <meta property="og:site_name" content="世界史" />
-        <meta property="og:image" content="https://st22182ti.github.io/sekaishi/img/logo.png" />
-        <title>世界史</title>
-        <link rel="manifest" href="manifest.json">
+<html lang="ja">
 
-        <style>
-            body {
-                height: 100%;
-                color: #2b2b2b;
-            }
-            h1{
-                margin: 3rem 0;
-            }
-            h2 {
-                margin-top: 3rem;
-            }
-            #particles-js {
-                position: fixed;
-                z-index: 1;
-                width: 100%;
-                height: 100%;
-                top: 0; bottom: 0;
-            }
-            #wrapper {
-                padding: 1rem;
-                position: relative;
-                z-index: 100;
-                background-color: rgba(255, 255, 255, 0);
-                box-sizing: border-box;
-                min-height: calc(100vh - 8rem);
-            }
-            .link {
-                margin: 0 0 0.5em 1em;
-            }
-            .latest::after {
-                content: "最新!";
-                color: #ec3939;
-                background-color: #eeeeee;
-                border-radius: 0.2em;
-                padding: 1px 3px;
-                margin-left: 0.6em;
-                font-size: 120%;
-            }
-            /*
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="世界史【テスト対策】" />
+    <meta property="og:description" content="世界史" />
+    <meta property="og:site_name" content="世界史" />
+    <meta property="og:image" content="https://st22182ti.github.io/sekaishi/img/logo.png" />
+    <title>世界史</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+    <style>
+        body {
+            height: 100%;
+            color: #2b2b2b;
+        }
+
+        h1 {
+            margin: 3rem 0;
+        }
+
+        h2 {
+            margin-top: 3rem;
+        }
+
+        #particles-js {
+            position: fixed;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+        }
+
+        #wrapper {
+            padding: 1rem;
+            position: relative;
+            z-index: 100;
+            background-color: rgba(255, 255, 255, 0);
+            box-sizing: border-box;
+            min-height: calc(100vh - 8rem);
+        }
+
+        .link {
+            margin: 0 0 0.5em 1em;
+        }
+
+        .latest::after {
+            content: "最新!";
+            color: #ec3939;
+            background-color: #eeeeee;
+            border-radius: 0.2em;
+            padding: 1px 3px;
+            margin-left: 0.6em;
+            font-size: 120%;
+        }
+
+        /*
             #reiwa {
                 font-family: 'Noto Sans HK', sans-serif;
                 font-family: 'Noto Serif TC', serif;
                 font-size: 40%;
             }
             */
-            @media screen and (max-width: 480px) {
-                body {
-                    font-size: 0.8rem;
-                }
+        @media screen and (max-width: 480px) {
+            body {
+                font-size: 0.8rem;
             }
-        </style>
-    </head>
+        }
+    </style>
+</head>
+<!--
     <script src="particles.js-master/particles.min.js" defer></script>
     <script src="my-particles.js" defer></script>
-    <script>
-        window.addEventListener('load', function() {
-         if ('serviceWorker' in navigator) {
-         navigator.serviceWorker.register("serviceWorker.js")
-         .then(function(registration) {
-         console.log("serviceWorker registed.");
-         }).catch(function(error) {
-         console.warn("serviceWorker error.", error);
-         });
-         }
-        });
-        </script>
-        <script>
-            const path = location.pathname;
-            history.replaceState(null, '', path + "?openExternalBrowser=1");
-        </script>
-    <body>
-        <div id="particles-js"></div>
-        <div id="wrapper">
-            <!--
+    -->
+<script>
+    window.addEventListener('load', function () {
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register("serviceWorker.js")
+                .then(function (registration) {
+                    console.log("serviceWorker registed.");
+                }).catch(function (error) {
+                    console.warn("serviceWorker error.", error);
+                });
+        }
+    });
+</script>
+<script>
+    const path = location.pathname;
+    history.replaceState(null, '', path + "?openExternalBrowser=1");
+</script>
+
+<body>
+    <div id="particles-js"></div>
+    <div id="wrapper">
+        <!--
                 <p id="reiwa">【令和最新版】</p>
             -->
-            <h1>世界史試験対策</h1>
-            <h2>【Latest Posts】</h2>
-            <div class="link latest">
-                <a href="1thQ.html">【前期中期】1thQ.html</a>
-            </div>
-        
-            <h2>【Archives】</h2>
-            <div class="link">
-                <a href="https://st22182ti.github.io/nihonshi/index.html?openExternalBrowser=1">【2年生】令和5年度日本史</a>
-            </div>
-            <!--
+        <h1>世界史試験対策</h1>
+        <h2>【Latest Posts】</h2>
+        <div class="link latest">
+            <a href="1thQ.html">【前期中期】1thQ.html</a>
+        </div>
+
+        <h2>【Archives】</h2>
+        <div class="link">
+            <a href="https://st22182ti.github.io/nihonshi/index.html?openExternalBrowser=1">【2年生】令和5年度日本史</a>
+        </div>
+        <!--
             <div class="link">
                 <a href="3rdQ.html">【後期中間】3rdQ.html</a>
             </div>
@@ -106,14 +119,16 @@
             </div>
             -->
 
-            <h2>【お知らせ】</h2>
-            <div class="link">
-                <p>・空欄をタップ（クリック）して解答を表示できる機能を追加しました。</p>
-                <p>・ページの一番下に印刷ボタン（解答あり・なし）を追加しました。</p>
-            </div>
+        <h2>【お知らせ】</h2>
+        <div class="link">
+            <p>・空欄をタップ（クリック）して解答を表示できる機能を追加しました。</p>
+            <p>・ページの一番下に印刷ボタン（解答あり・なし）を追加しました。</p>
         </div>
-        <div style="color:rgba(0,0,0,0.7);font-size:0.8rem;text-align:center;margin-top:5rem;margin-bottom:1rem;font-family:monospace;">
-            © mt 2024 All rights reserved
-        </div>
-    </body>
+    </div>
+    <div
+        style="color:rgba(0,0,0,0.7);font-size:0.8rem;text-align:center;margin-top:5rem;margin-bottom:1rem;font-family:monospace;">
+        © mt 2024 All rights reserved
+    </div>
+</body>
+
 </html>

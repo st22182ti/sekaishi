@@ -54,3 +54,11 @@ css_link.rel = 'stylesheet';
 css_link.type = 'text/css';
 css_link.href = 'main.css';
 head.appendChild(css_link);
+
+/*
+window.onload = () => {
+head.innerHTML += '<link rel="preconnect" href="https://fonts.googleapis.com">'
+head.innerHTML += '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+head.innerHTML += '<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet"></link>'
+}
+*/
