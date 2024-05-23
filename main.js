@@ -2,7 +2,7 @@ const markList = document.getElementsByTagName("mark");
 const show = () => {
     checkbox = document.getElementById("show");
     for (let elm of markList) {
-        if(checkbox.checked) {
+        if (checkbox.checked) {
             elm.classList.add("mark-show");
         } else {
             elm.classList.remove("mark-show");
@@ -19,7 +19,7 @@ for (let elm of markList) {
 const print_noanswer = document.getElementById("print-noanswer");
 print_noanswer.innerText = "解答無しで印刷する"
 print_noanswer.addEventListener("click", () => {
-    for(let elm of markList) {
+    for (let elm of markList) {
         elm.classList.remove("mark-show");
     }
     window.print();
@@ -28,7 +28,7 @@ print_noanswer.addEventListener("click", () => {
 const print_answer = document.getElementById("print-answer");
 print_answer.innerText = "解答有りで印刷する"
 print_answer.addEventListener("click", () => {
-    for(let elm of markList) {
+    for (let elm of markList) {
         elm.classList.add("mark-show");
     }
     window.print();
@@ -61,4 +61,47 @@ head.innerHTML += '<link rel="preconnect" href="https://fonts.googleapis.com">'
 head.innerHTML += '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
 head.innerHTML += '<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet"></link>'
 }
+*/
+
+/*
+
+window.speechSynthesis.onvoiceschanged = () => {
+    this.voices = window.speechSynthesis.getVoices();
+  };
+
+  
+document.getElementById("play").addEventListener("click", () => {
+    if (window.speechSynthesis) {
+
+        var text = document.getElementsByClassName("markdown-preview")[0].innerText;
+
+        text = text.replace("(", " ").replace(")", " ");
+
+        const uttr = new SpeechSynthesisUtterance("こんにちは");
+
+        console.log(text);
+
+        uttr.lang = "ja-JP";
+        uttr.rate = 1.0;
+        uttr.pitch = 1.0;
+        uttr.volume = 1.0;
+        
+        uttr.text = text;
+        const voiceList = speechSynthesis.getVoices();
+        console.log(voiceList)
+
+        voiceList.forEach(elm => {
+            if(elm.lang.startsWith('ja')) {
+                uttr.voice = elm;
+            }
+        });
+
+        console.log(uttr.voice)
+
+        window.speechSynthesis.speak(uttr);
+        speechSynthesis.speak(uttr);
+    } else {
+        alert("ブラウザが音声合成非対応です");
+    }
+});
 */
