@@ -37,7 +37,8 @@ strong {
     }
 
     body p,
-    body li {
+    body li,
+    div u {
         font-size: 1.4rem !important;
     }
 }
