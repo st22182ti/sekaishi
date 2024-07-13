@@ -18,7 +18,12 @@ body {
 body p,
 body ul {
     font-size: 1em !important;
-    line-height: 1.8em !important;
+/*    line-height: 1.8em !important; */
+    line-height: 2em !important;
+}
+
+body li {
+    line-height: 2.8em !important;
 }
 
 mark {
