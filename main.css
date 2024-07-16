@@ -30,6 +30,7 @@ mark {
     font-size: 110%;
     padding: 0 0.2em;
     white-space: nowrap;
+    cursor: pointer;
 }
 
 strong {
