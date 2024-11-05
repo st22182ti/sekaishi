@@ -85,7 +85,7 @@ mark {
 
 mark::before {
   content: "";
-  border-bottom: 2px dashed black;
+  border-bottom: 1px dashed #525252;
   position: absolute;
   top: 0;
   left: -0.5em;
