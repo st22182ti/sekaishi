@@ -1,0 +1,592 @@
+<!DOCTYPE html><html><head>
+      <title>3rdQ</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////home/mt/.vscode-oss/extensions/shd101wyy.markdown-preview-enhanced-0.8.14-universal/crossnote/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="後期中間-世界史">後期中間 世界史 </h1>
+<p><br><br></p>
+<h2 id="1-アメリカ領土拡大と南北戦争">1. アメリカ領土拡大と南北戦争 </h2>
+<br>
+<h4 id="1-領土拡大により先住民の人口はどう変化し-彼らの居住地を奪いどこに移住させたか">1. 領土拡大により先住民の人口はどう変化し、彼らの居住地を奪いどこに移住させたか。 </h4>
+<p><mark>ジャクソン</mark> 大統領の先住民政策</p>
+<p>「拡大は明白な天命」として土地を安価に買い上げ、応じない先住民は <mark>居留地</mark> に強制移住させた</p>
+<p>これにより、先住民の人口は <mark>激減</mark> した</p>
+<p><br><br></p>
+<h4 id="2-人口が増えると新たな州が誕生したこのときにどんな対立が生まれたか">2. 人口が増えると新たな州が誕生した。このときにどんな対立が生まれたか。 </h4>
+<p>奴隷制に反対する北部と、奴隷制を維持したい南部の対立が生まれた</p>
+<ul>
+<li>
+<p><mark>ミズーリ協定</mark>  : 奴隷制は30°30'線以南でのみ認めることで妥協</p>
+</li>
+<li>
+<p><mark>カンザス・ネブラスカ法</mark>  : 住民投票で奴隷制を決定する<br>
+→ 妥協が破られ、北部で奴隷制に反対する共和党が誕生</p>
+</li>
+</ul>
+<p><br><br></p>
+<h4 id="3-共和党リンカンの当選によりで合衆国から離脱した南部の国家名を答えよ">3. 共和党リンカンの当選によりで合衆国から離脱した南部の国家名を答えよ。 </h4>
+<p>国名:  <mark>アメリカ連合国</mark></p>
+<ol>
+<li>
+<p><mark>共和</mark> 党の <mark>リンカン</mark> 大統領が就任（奴隷正反対の立場）</p>
+</li>
+<li>
+<p>南部が <mark>アメリカ連合国</mark> を結成して合衆国から離脱し、 <mark>南北戦争</mark> が勃発<br>
+※ <mark>11</mark> 州で構成された</p>
+</li>
+</ol>
+<p><br><br></p>
+<h4 id="4-南北戦争はなぜ北部が勝利できたのか-3つ理由を答えよ">4. 南北戦争はなぜ北部が勝利できたのか、3つ理由を答えよ。 </h4>
+<ol>
+<li>
+<p><mark>人口</mark> と <mark>工業力</mark> において北部が優勢だった</p>
+</li>
+<li>
+<p><mark>ホームステッド法</mark> で西部の開拓農民に土地を与え、西部の支持を得た</p>
+</li>
+<li>
+<p><mark>奴隷解放宣言</mark> で南部の奴隷制を禁止し、国際世論を味方につけた</p>
+</li>
+</ol>
+<p><br><br></p>
+<h4 id="5-19世紀のアメリカ移民の果たした役割を3つ答えよ">5. 19世紀のアメリカ移民の果たした役割を3つ答えよ。 </h4>
+<ol>
+<li>
+<p>大量の移民が <mark>市場を拡大</mark> した</p>
+</li>
+<li>
+<p><mark>労働力</mark> となって工業発展を支えた</p>
+</li>
+<li>
+<p><mark>多様性のある文化</mark> をもたらした</p>
+</li>
+</ol>
+<p><br><br></p>
+<h4 id="6-アメリカの19世紀の大統領の実績をそれぞれ説明せよ">6. アメリカの19世紀の大統領の実績をそれぞれ説明せよ。 </h4>
+<ol>
+<li>
+<p>5代モンロー大統領(外交)</p>
+<ul>
+<li><mark>モンロー宣言</mark> で南北アメリカとヨーロッパ間の <mark>相互不干渉</mark> を宣言</li>
+</ul>
+</li>
+<li>
+<p>7代ジャクソン大統領(参政権・先住民政策)</p>
+<ul>
+<li><mark>民衆の重視</mark> を唱える</li>
+<li>土地の買い上げに応じない先住民を居留地に <mark>強制移住</mark> させた</li>
+</ul>
+</li>
+<li>
+<p>16代リンカン大統領(南北戦争)</p>
+<ul>
+<li><mark>共和党</mark> の大統領として就任</li>
+<li><mark>奴隷解放宣言</mark> で南部の奴隷制を禁止し国際世論を味方につけた</li>
+<li>南北戦争で北部を勝利に導いた</li>
+</ul>
+</li>
+</ol>
+<p><br><br></p>
+<h2 id="2-3-第二次産業革命と帝国主義">2, 3. 第二次産業革命と帝国主義 </h2>
+<br>
+<h4 id="1-第二次産業革命は資本家と労働者にどのような影響が見られたか">1. 第二次産業革命は資本家と労働者にどのような影響が見られたか? </h4>
+<ul>
+<li>
+<p>資本家: 銀行などの <mark>金融資本</mark> と巨大企業が市場を独占<br>
+→ 工業部門は巨額の資本を必要としたため</p>
+</li>
+<li>
+<p>労働者: 近代科学の知識や専門資格が必要になり、 <mark>近代教育</mark> が普及</p>
+</li>
+</ul>
+<p><br><br></p>
+<h4 id="2-アジアアフリカ地域で帝国主義支配をどのようにうけたか">2. アジア・アフリカ地域で帝国主義支配をどのようにうけたか? </h4>
+<ul>
+<li>
+<p><mark>資源</mark> や <mark>労働力</mark> の収奪</p>
+</li>
+<li>
+<p><mark>伝統文化</mark> の破壊</p>
+</li>
+<li>
+<p><mark>経済</mark> 、 <mark>社会構造</mark> の改造</p>
+</li>
+</ul>
+<p>が行われた</p>
+<p><br><br></p>
+<h4 id="3-1870年以降の対外政策であるイギリスの3c政策とは">3. 1870年以降の対外政策であるイギリスの3C政策とは? </h4>
+<p><mark>インド</mark> ・ <mark>エジプト</mark> ・ <mark>南アフリカ</mark> を結ぶ勢力圏を作る</p>
+<ol>
+<li>
+<p>保守党の <mark>ディズレーリ</mark> が <mark>スエズ運河会社</mark> を買収して運営権を握る<br>
+→ 重要な <mark>インド</mark> の支配と連絡路を確保するため</p>
+</li>
+<li>
+<p><mark>エジプト</mark> を支配下におく</p>
+</li>
+<li>
+<p><mark>ジョゼフ・チェンバレン</mark> 植民相が、ケープ植民地の拡張政策を引き継いで <mark>南アフリカ戦争</mark> をおこす</p>
+</li>
+</ol>
+<p><br><br></p>
+<h4 id="4-ドイツの3b政策と建艦競争とは">4. ドイツの3B政策と建艦競争とは? </h4>
+<ul>
+<li>
+<p>3B政策:</p>
+<ul>
+<li><mark>バグダード鉄道</mark> を敷設し、 <mark>ベルリン</mark> ・ <mark>ビザンティウム</mark> ・ <mark>バグダード</mark> を結ぶ勢力圏を作る</li>
+<li><mark>ヴィルヘルム2世</mark> がとった帝国主義政策（ <mark>世界政策</mark> ）</li>
+<li>イギリスの3C政策に対抗するため</li>
+</ul>
+</li>
+<li>
+<p>建艦競争:</p>
+<ul>
+<li><mark>イギリス</mark> と <mark>ドイツ</mark> が海軍軍備拡張競争を行った</li>
+</ul>
+</li>
+</ul>
+<p><br><br></p>
+<h4 id="5-アメリカは巨大企業を統制し-自由競争を取り戻そうとした何主義というか">5. アメリカは巨大企業を統制し、自由競争を取り戻そうとした。何主義というか? </h4>
+<p><mark>革新</mark> 主義</p>
+<p>巨大企業が自由競争を狭め、移民の増加によって貧困問題も表面化<br>
+→　独占の禁止や労働条件の改善などを行った</p>
+<p><br><br></p>
+<h2 id="4-5-第一次世界大戦とロシア革命">4, 5. 第一次世界大戦とロシア革命 </h2>
+<br>
+<h4 id="1-パンゲルマン主義とパンスラヴ主義はどこを巡って対立が激化したか">1. パン・ゲルマン主義とパン・スラヴ主義はどこを巡って対立が激化したか? </h4>
+<p><mark>バルカン半島</mark> を巡って対立が激化<br>
+→  <mark>ヨーロッパの火薬庫</mark> と呼ばれた</p>
+<ul>
+<li>
+<p><strong>パン・ゲルマン主義</strong>: ドイツ・オーストリア・イタリア<br>
+→ ゲルマン人勢力による世界制覇を目指し、 <mark>バルカン半島</mark> を征服しようとした</p>
+</li>
+<li>
+<p><strong>パン・スラヴ主義</strong>: ロシア・セルビア<br>
+→  <mark>バルカン半島</mark> をゲルマン人勢力から守ろうとした</p>
+</li>
+</ul>
+<p><br><br></p>
+<h4 id="2-なぜサライェヴォ事件が起きたのか">2. なぜサライェヴォ事件が起きたのか? </h4>
+<ol>
+<li>
+<p>青年トルコ革命でオスマン帝国が混乱</p>
+</li>
+<li>
+<p><mark>オーストリア</mark> が <mark>ボスニア・ヘルツェゴビナ</mark> を併合</p>
+</li>
+<li>
+<p>反発した <mark>セルビア</mark> の青年が <mark>サライェヴォ</mark> を訪問したオーストリア皇太子夫妻を暗殺<br>
+※ サライェヴォはボスニア・ヘルツェゴビナの中心都市</p>
+</li>
+</ol>
+<p>その後、</p>
+<ol>
+<li>
+<p><mark>オーストリア</mark> が <mark>セルビア</mark> に宣戦</p>
+</li>
+<li>
+<p><mark>ロシア</mark> がセルビアを支援</p>
+</li>
+<li>
+<p><mark>ドイツ</mark> が <mark>ロシア</mark> に宣戦</p>
+</li>
+<li>
+<p>フランス、イギリスがロシア側で参戦し、 <mark>第一次世界大戦</mark> が勃発</p>
+</li>
+</ol>
+<p><br><br></p>
+<h4 id="3-ドイツの短期決戦計画はどの戦いで挫折したか">3. ドイツの短期決戦計画はどの戦いで挫折したか? </h4>
+<p><mark>マルヌの戦い</mark> で挫折した</p>
+<ol>
+<li>
+<p>ドイツは中立のベルギーに侵入し、フランスに侵攻、パリに迫る</p>
+</li>
+<li>
+<p><mark>マルヌの戦い</mark> でフランス、イギリス軍に阻まれ、短期決戦計画は挫折</p>
+</li>
+<li>
+<p>西部戦線は、塹壕戦で膠着状態に陥る</p>
+</li>
+<li>
+<p>東部戦線では、 <mark>タンネンベルクの戦い</mark> でドイツ軍がロシア軍を撃破</p>
+</li>
+</ol>
+<p><br><br></p>
+<h4 id="4-戦時外交の特徴は何か">4. 戦時外交の特徴は何か? </h4>
+<p><mark>秘密条約</mark> に基づいていた</p>
+<p>3つの秘密条約：</p>
+<ul>
+<li>
+<p><mark>ロンドン条約</mark></p>
+<ul>
+<li>イタリアに、「未回収のイタリア」やフィウメの割譲を約束</li>
+<li>イタリアは三国同盟から <mark>三国協商</mark> に寝返る</li>
+</ul>
+</li>
+<li>
+<p><mark>サイクス・ピコ協定</mark></p>
+<ul>
+<li>イギリス、フランス、ロシアが、オスマン帝国の分割を取り決め</li>
+</ul>
+</li>
+<li>
+<p><mark>フサイン・マクマホン協定</mark> ・ <mark>バルフォア宣言</mark></p>
+<ul>
+<li><mark>イギリス</mark> が、 <mark>アラブ人</mark> ・ <mark>ユダヤ人</mark> に、オスマン帝国領内での国家建設を約束</li>
+<li>パレスチナ問題の原因になる</li>
+</ul>
+</li>
+</ul>
+<p><br><br></p>
+<h4 id="5-総力戦とはどのような戦争だったのだろうか">5. 総力戦とはどのような戦争だったのだろうか? </h4>
+<p><strong>総力戦体制</strong>のもとで、政府が国民生活を統制</p>
+<ul>
+<li>
+<p>一般民衆も戦争に動員<br>
+→ <strong>女性</strong>が様々な職場に進出<br>
+→ 植民地の現地人も兵士や労働者として動員</p>
+</li>
+<li>
+<p>企業の生産活動管理、 <mark>配給制</mark> の導入</p>
+</li>
+<li>
+<p>第2次産業革命以来の工業力を最大限に発揮<br>
+→ 機関銃、新兵器（戦車、飛行機、毒ガス）の使用</p>
+</li>
+<li>
+<p><mark>挙国一致</mark> 体制の成立<br>
+→ 政府や諸政党が互いに協力</p>
+</li>
+</ul>
+<p><br><br></p>
+<h4 id="6-アメリカはなぜ参戦したのか">6. アメリカはなぜ参戦したのか? </h4>
+<p>イギリスの海上封鎖に対する<strong>ドイツ</strong>の <mark>無制限潜水艦作戦</mark> から自国民を保護するため</p>
+<p>アメリカが協商国側に参戦し、戦争終結へ向かう</p>
+<p><br><br></p>
+<h4 id="7-第一次世界大戦の即時終結を求めてロシアは何回革命を行ったか">7. 第一次世界大戦の即時終結を求めてロシアは何回革命を行ったか? </h4>
+<p><mark>2</mark> 回行われた</p>
+<ol>
+<li>
+<p><mark>二月</mark> 革命</p>
+<ul>
+<li>
+<p>大戦での疲弊と食糧危機により即時停戦を要求</p>
+</li>
+<li>
+<p><mark>ソヴィエト</mark> （労働者・兵士の代表会議）の反乱</p>
+</li>
+<li>
+<p>ニコライ2世が退位し、臨時政府が成立</p>
+</li>
+<li>
+<p>ただし、<strong>戦争は継続</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p><mark>十月</mark> 革命</p>
+<ul>
+<li>
+<p>戦争の即時集結、臨時政府打倒、<strong>社会主義政権樹立</strong>を目指す</p>
+</li>
+<li>
+<p><mark>レーニン</mark> 、 <mark>トロッキー</mark> らが社会主義政権を樹立</p>
+</li>
+<li>
+<p><mark>平和に関する布告</mark> を発表<br>
+→  <mark>無併合</mark> 、 <mark>無償金</mark> 、 <mark>民族自決</mark> の原則で即時講和を呼びかけ</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><br><br></p>
+<h4 id="8-1918年-革命の波及を恐れ-英仏米日がソヴィエトに軍を派選した戦争を何と呼ぶか">8. 1918年、革命の波及を恐れ、英仏米日がソヴィエトに軍を派選した戦争を何と呼ぶか? </h4>
+<p><mark>対ソ干渉</mark> 戦争</p>
+<ul>
+<li>イギリス、フランス、アメリカ、日本が <mark>ソヴィエト</mark> に軍隊を派遣</li>
+<li><mark>赤軍</mark> の対抗により失敗</li>
+</ul>
+<p><br><br></p>
+<h4 id="9-国内でソヴィエト政府に反対した内戦もあり-これを鎮圧するため何軍を創設した-か">9. 国内でソヴィエト政府に反対した内戦もあり、これを鎮圧するため何軍を創設した か。 </h4>
+<p><mark>赤軍</mark> を創設</p>
+<p>ソヴィエト政権の社会主義政策に、旧ロシア軍人や農民など諸勢力が反発<br>
+→  <mark>赤軍</mark> を創設して対抗</p>
+<p><br><br></p>
+<h2 id="5-6-1920年代ヴェルサイユ体制下の欧米諸国">5, 6 1920年代ヴェルサイユ体制下の欧米諸国 </h2>
+<br>
+<h4 id="1-第一次世界大戦後の新たな国際秩序を2つ答えよ">1. 第一次世界大戦後の新たな国際秩序を2つ答えよ。 </h4>
+<ul>
+<li>
+<p><mark>ヴェルサイユ</mark> 体制</p>
+<ul>
+<li>
+<p><mark>ドイツ</mark> の再興を封じ込め、孤立化させる体制</p>
+</li>
+<li>
+<p><mark>パリ講和会議</mark> で成立</p>
+</li>
+<li>
+<p><mark>ヴェルサイユ</mark> 条約</p>
+<ul>
+<li>ドイツに巨額の賠償金</li>
+<li>全植民地の放棄</li>
+<li>軍備制限、徴兵制廃止</li>
+<li><mark>アルザス・ロレーヌ</mark> をフランスに返還（ビスマルクが奪取）</li>
+<li>ラインラント非武装化</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><mark>ワシントン</mark> 体制</p>
+<ul>
+<li>
+<p>日本の台頭を抑え込む</p>
+</li>
+<li>
+<p><mark>ワシントン会議</mark> で成立</p>
+</li>
+<li>
+<p><mark>海軍軍備制限条約</mark> : アメリカ：イギリス：日本＝5：5：3</p>
+</li>
+<li>
+<p><mark>九カ国条約</mark> : 中国の主権尊重と <mark>門戸開放</mark> の原則を確認</p>
+</li>
+<li>
+<p><mark>四カ国条約</mark> : 太平洋諸島の現状維持を決定（日英同盟の解消）</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><br><br></p>
+<h4 id="2-国際秩序の原則は-アメリカ大統領-ウィルソン-がとなえた何であるかまた-内容を説明せよ">2. 国際秩序の原則は、アメリカ大統領 <mark>ウィルソン</mark> がとなえた何であるか。また、内容を説明せよ。 </h4>
+<p>国際秩序の原則: <mark>14ヵ条</mark></p>
+<ul>
+<li>
+<p><mark>民族自決</mark> （植民地統治で現地人の意思を尊重）</p>
+</li>
+<li>
+<p><mark>秘密外交</mark> の廃止</p>
+</li>
+<li>
+<p><mark>無併合</mark> と <mark>無賠償</mark></p>
+</li>
+<li>
+<p><mark>国際的な平和機構</mark> の設立</p>
+</li>
+<li>
+<p>軍備の縮小</p>
+</li>
+</ul>
+<p><br><br></p>
+<h4 id="3-ヨーロッパでの国際秩序の結果はどうだったか">3. ヨーロッパでの国際秩序の結果はどうだったか。 </h4>
+<p>イギリスやフランスの抵抗で14カ条の一部しか実現せず</p>
+<ul>
+<li>
+<p><strong>民族自決</strong><br>
+→ イギリス、フランスの植民地支配は続く（秘密条約優先）</p>
+</li>
+<li>
+<p><strong>無賠償</strong><br>
+→ ドイツに厳しい条件の提示（報復）</p>
+</li>
+</ul>
+<p>民族自決の理念は、<strong>東ヨーロッパ諸国</strong>のみ実現</p>
+<ul>
+<li>
+<p><strong>8カ国</strong>（フィンランド、ポーランドなど）の新興独立国が誕生（東ヨーロッパのみ）<br>
+→ 社会主義国家の影響・拡大を防ぐ防波堤とするため</p>
+</li>
+<li>
+<p>アジア・アフリカの植民地は戦勝国が新たな支配者に<br>
+→ 戦勝国の <mark>委任統治</mark> 支配を受ける（国連からの依頼）</p>
+</li>
+</ul>
+<p><br><br></p>
+<h4 id="4-西欧諸国は-第一次世界大戦の経済的状況は好況か不況か-どうであったか">4. 西欧諸国は、第一次世界大戦の経済的状況は好況か不況か、どうであったか。 </h4>
+<p><mark>不況</mark> だった</p>
+<ul>
+<li>
+<p>イギリス</p>
+<ul>
+<li>
+<p>アメリカへの <mark>戦債</mark> 返済に苦しむ</p>
+</li>
+<li>
+<p>第4回選挙法改正で21歳以上の男性と30歳以上の<strong>女性</strong>に参政権</p>
+</li>
+<li>
+<p>自治領（カナダ、オーストラリア）が大戦で発言力を高める<br>
+→  <mark>ウェルトミンスター顕彰</mark> で本国と対等の地位に</p>
+</li>
+<li>
+<p>イギリス帝国から、 <mark>イギリス連邦</mark> <strong>（コモンウェルス）</strong> へ改称</p>
+</li>
+<li>
+<p>アイルランドが国名を <mark>エール</mark> としてイギリス連邦を離脱</p>
+</li>
+</ul>
+</li>
+<li>
+<p>フランス</p>
+<ul>
+<li>
+<p>アメリカへの <mark>戦債</mark> 返済に苦しむ</p>
+</li>
+<li>
+<p>ベルギーを誘ってドイツの <mark>ルール工業地帯</mark> を軍事占拠<br>
+→ ドイツ賠償金の支払い遅れのため（アメリカ戦債返済に充てる）<br>
+→ 国際的批判により、フランス外相ブリアンの主導で撤兵</p>
+</li>
+</ul>
+</li>
+<li>
+<p>ドイツ</p>
+<ul>
+<li>
+<p>賠償金の支払いに苦しむ</p>
+</li>
+<li>
+<p><mark>ヴァイマル憲法</mark> 採択（民主的憲法）</p>
+</li>
+<li>
+<p><mark>シュトレーゼマン</mark> 首相が経済の立て直し<br>
+→ 賠償金支払いの緩和とアメリカ資本の導入に成功</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><br><br></p>
+<h4 id="5-西欧諸国はアメリカへ何をしなければならなかったか">5. 西欧諸国はアメリカへ何をしなければならなかったか。 </h4>
+<p>アメリカへの <mark>戦債</mark> 返済</p>
+<p>アメリカは旧連合国が求めた戦債返済の免除を拒否</p>
+<p><br><br></p>
+<h4 id="6-1920年代の前半は戦後も武力抗争が続き国際協調への道は遠かった-後半-1925年ドイツのシュトレーゼマンが主催した何条約で国際協調が加速したか-この結果ドイツは何に加盟するか">6. 1920年代の前半は戦後も武力抗争が続き国際協調への道は遠かった。 後半、1925年ドイツのシュトレーゼマンが主催した何条約で国際協調が加速したか。 この結果ドイツは何に加盟するか </h4>
+<p>ドイツ外相 <mark>シュトレーゼマン</mark> とフランス外相ブリアンが、 <mark>ロカルノ条約</mark> を成立させる</p>
+<p>イギリス、フランス、ドイツ、イタリア、ベルギーなどによる<strong>地域安全保障条約</strong><br>
+→ ヨーロッパの戦後秩序（ドイツの孤立化）の転換<br>
+→ ドイツが<strong>国際連盟</strong>に加盟</p>
+<p><br><br></p>
+<h4 id="7-アメリカの1920年代の繁栄期を何と呼ぶか大衆社会を説明せよ">7. アメリカの1920年代の繁栄期を何と呼ぶか。大衆社会を説明せよ。 </h4>
+<p>アメリカの繁栄期　＝　<mark>パクス・アメリカーナ</mark></p>
+<ul>
+<li>
+<p>大衆社会</p>
+<ul>
+<li>大量生産、大量消費、大衆文化の時代</li>
+<li>流れ作業。部品の規格化　→　フォード車、家庭電化製品を安価に大量生産</li>
+<li><mark>ラジオ</mark> 、 <mark>映画</mark> 、 <mark>スポーツ観戦</mark> などの大衆文化が普及</li>
+<li>12年間の共和党政権による自由放任政策、経済的繁栄</li>
+</ul>
+</li>
+<li>
+<p>伝統的な<strong>白人社会の価値観</strong>が強調され、<strong>保守的</strong>な傾向が強まる</p>
+<ul>
+<li>禁酒法の制定</li>
+<li><strong>KKK</strong>（クー・クラックス・クラン）→ 黒人や移民を攻撃</li>
+<li><mark>移民法</mark> の成立 →　日本を含むアジア系移民の流入を禁止</li>
+</ul>
+</li>
+</ul>
+<p><br><br></p>
+<p><br><br></p>
+<p><a id="print-noanswer" class="print" href="javascript:void(0);"></a></p>
+<p><a id="print-answer" class="print" href="javascript:void(0);"></a></p>
+<br>
+<blockquote>
+<p>修正は <a href="https://github.com/st22182ti/sekaishi/issues">GitHub#issues</a> から</p>
+</blockquote>
+<div style="color:rgba(0,0,0,0.7);font-size:0.8rem;text-align:center;margin-top:5rem;">
+    © mt 2024 All rights reserved
+</div>
+<div id="space"></div>
+<label id="o-header" for="show">
+        <input id="show" class="checkbox" type="checkbox" onchange="show();">
+    <span id="label">&nbsp;&nbsp;&nbsp;&nbsp;解答を全て表示</span>
+</label>
+<script defer="" src="main.js"></script>
+<style>
+    p {
+        margin-top: 2.4em !important;
+        margin-bottom: 3px !important;
+    }
+    u {
+        display: block;
+        padding-bottom: 1em;
+        color: #4c7d59;
+        text-decoration: none;
+    }
+    u::before {
+        content: "Q．";
+    }
+    u::after {
+        content: "\A";
+        white-space: pre;
+    }
+    .info, .q {
+        position: relative;
+        padding: 16px 2.5em;;
+        margin: 24px 0 50px 0;
+        border-radius: 8px;
+        z-index: 0;
+    }
+    .info {
+        background-color: #f0fae9;
+    }
+    .q {
+        background-color: #fbf5e0;
+    }
+    .info::after,
+    .q::after {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        width: 3px;
+        content: "";
+        display: inline-block;
+        border-radius: 8px;
+        z-index: 1;
+    }
+    .info::after {
+        background-color: #66cb1b;
+    }
+    .q::after {
+        background-color: #e0af00;
+    }
+</style>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

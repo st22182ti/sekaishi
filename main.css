@@ -18,7 +18,7 @@ body {
 body p,
 body ul {
     font-size: 1em !important;
-/*    line-height: 1.8em !important; */
+    /*    line-height: 1.8em !important; */
     line-height: 2em !important;
 }
 
@@ -64,13 +64,25 @@ strong {
 }
 
 mark {
-    opacity: 0;
-    color: white;
+    color: transparent;
+    position: relative;
     background-color: white;
+    margin: 0 0.5em;
+}
+
+mark::before {
+    content: "";
+    border-bottom: dotted;
+    border-color: black;
+    border-width: 3px;
+    position: absolute;
+    top: 0;
+    left: -0.5em;
+    right: -0.5em;
+    bottom: -2px;
 }
 
 .mark-show {
-    opacity: 1;
     color: #F06060;
 }
 
