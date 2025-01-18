@@ -1,43 +1,53 @@
 const markList = document.getElementsByTagName("mark");
 const show = () => {
-	checkbox = document.getElementById("show");
-	for (let elm of markList) {
-		if (checkbox.checked) {
-			elm.classList.add("mark-show");
-		} else {
-			elm.classList.remove("mark-show");
-		}
-	}
+    checkbox = document.getElementById("show");
+    for (let elm of markList) {
+        if (checkbox.checked) {
+            elm.classList.add("mark-show");
+        } else {
+            elm.classList.remove("mark-show");
+        }
+    }
 };
 
 for (let elm of markList) {
-	elm.addEventListener("click", () => {
-		elm.classList.toggle("mark-show");
-	});
+    elm.addEventListener("click", () => {
+        elm.classList.toggle("mark-show");
+    });
 }
 
 const print_noanswer = document.getElementById("print-noanswer");
 print_noanswer.innerText = "解答無しで印刷する";
 print_noanswer.addEventListener("click", () => {
-	for (let elm of markList) {
-		elm.classList.remove("mark-show");
-	}
-	window.print();
+    for (let elm of markList) {
+        elm.classList.remove("mark-show");
+    }
+    window.print();
 });
 
 const print_answer = document.getElementById("print-answer");
 print_answer.innerText = "解答有りで印刷する";
 print_answer.addEventListener("click", () => {
-	for (let elm of markList) {
-		elm.classList.add("mark-show");
-	}
-	window.print();
+    for (let elm of markList) {
+        elm.classList.add("mark-show");
+    }
+    window.print();
 });
 
-window.onload = () => {
-	history.replaceState(null, "", "index.html?openExternalBrowser=1");
-};
+/* ---------------------------------------------------------
+   ---------------------------------------------------------
+   ---------------------------------------------------------
+   ------------- URLをindex.htmlに書き換え -------------------
+*/
 
+/*
+window.onload = () => {
+    history.replaceState(null, "", "index.html?openExternalBrowser=1");
+};
+*/
+
+
+//----------------------------------------------------------
 // insert head links (favicon, css)
 const head = document.getElementsByTagName("head")[0];
 
@@ -66,7 +76,7 @@ head.appendChild(gfonts_pre2_link);
 
 const gfonts_link = document.createElement("link");
 gfonts_link.href =
-	"https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap";
+    "https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap";
 gfonts_link.rel = "stylesheet";
 head.appendChild(gfonts_link);
 
