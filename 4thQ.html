@@ -1,0 +1,604 @@
+<!DOCTYPE html><html><head>
+      <title>4thQ</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////home/mt/.vscode-oss/extensions/shd101wyy.markdown-preview-enhanced-0.8.15-universal/crossnote/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="学年末試験対策プリント">学年末試験対策プリント </h1>
+<br>
+<h2 id="第7週-1920年代の欧米諸国その2">第7週 1920年代の欧米諸国（その2） </h2>
+<br>
+<ol>
+<li><strong>イタリアにおいて、ファシズム体制の背景と成立までの過程を説明せよ。</strong><br>
+<br></li>
+</ol>
+<ul>
+<li>背景3つ：<br><br>
+<ul>
+<li>パリ講和会議で領土拡張（フィウメ返還）、賠償金なし　→　世論の不満<br>
+<br></li>
+<li>民衆層↔支配層（地主、工場主、軍部、官僚）間の <strong>( <mark>社会対立の激化</mark> )</strong><br>
+<br></li>
+<li>戦後の不況から <strong>( <mark>インフレーション</mark> )</strong> → 北イタリアの労働者による工場占拠運動、農民の土地占拠<br>
+<br><br></li>
+</ul>
+</li>
+<li>成立～一党独裁へ：<br><br>
+<ul>
+<li><strong>( <mark>ムッソリーニ</mark> )</strong> の <strong>( <mark>ファシスト党</mark> )</strong> が支持を集める<br>
+→　<strong>ナショナリズム</strong>、暴力による秩序回復を掲げる<br>
+<br></li>
+<li><strong>ムッソリーニ</strong>が <strong>( <mark>ローマ進軍</mark> )</strong> を行い、イタリア国王に首相に任命される<br>
+<br></li>
+<li><strong>ファシスト党</strong>が <strong>( <mark>一党独裁体制</mark> )</strong> を成立させる　→　共産党、労働組合を弾圧<br>
+<br><br>
+<strong>( <mark>ファシズム体制</mark> )</strong> の成立<br>
+→ ナショナリズム、指導者崇拝、一党独裁、批判勢力の暴力的封じ込め<br>
+→ 国民の統合…団体旅行など余暇活動の組織</li>
+</ul>
+</li>
+</ul>
+<p><br><br></p>
+<ol start="2">
+<li><strong>1920年代のソ連は、どのように変化したか。</strong><br>
+<br></li>
+</ol>
+<ul>
+<li>
+<p>ソ連の成立は：<br></p>
+<ul>
+<li>
+<p>ソヴィエトは内戦で荒廃　→　新経済政策 <strong>( <mark>ネップ</mark> )</strong> で <strong>( <mark>市場経済</mark> )</strong> を導入し経済回復</p>
+</li>
+<li>
+<p><strong>( <mark>ソヴィエト社会主義共和国連邦</mark> )</strong> （ソ連）が成立<br>
+→　ウクライナ・ベラルーシ・ザカフカースがソヴィエト＝ロシアと結合<br>
+<br></p>
+</li>
+</ul>
+</li>
+<li>
+<p>国際社会への復帰は：<br><br></p>
+<ul>
+<li>1922年、<strong>( <mark>ラパロ条約</mark> )</strong> で <strong>( <mark>ドイツ</mark> )</strong> に国家承認を受ける　→　国際社会への復帰進展<br>
+<br></li>
+</ul>
+</li>
+<li>
+<p>レーニンの死去（1924年）以降は：<br></p>
+<ul>
+<li>
+<p><strong>( <mark>スターリン</mark> )</strong> が <strong>( <mark>一国社会主義論</mark> )</strong> を唱えて <strong>( <mark>世界革命路線</mark> )</strong> の <strong>( <mark>トロツキー</mark> )</strong> を追放</p>
+</li>
+<li>
+<p><strong>( <mark>コミンテルン</mark> )</strong> も、<strong>世界革命推進</strong> より <strong>ソ連擁護</strong> を優先</p>
+</li>
+<li>
+<p>1928年、<strong>( <mark>第一次5ヶ年計画</mark> )</strong> を開始　→　機械化、集団化、低価格での穀物供出</p>
+<ul>
+<li>工業　…　工場建設、生産拡大、　重工業化の推進</li>
+<li>農業　…　農民を<strong>コルホーズ</strong>（集団農場）、<strong>ソフホーズ</strong>（国営農場）へ強制編入<br>
+→　農業集団化完了　→　農村で餓死者が大量発生</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><br><br><br></p>
+<h2 id="第8週-世界恐慌とヴェルサイユ体制の破壊">第8週 世界恐慌とヴェルサイユ体制の破壊 </h2>
+<br>
+<ol>
+<li><strong>世界恐慌のきっかけとなった事件は何か？また恐慌の背景を3つ説明せよ。</strong><br>
+<br></li>
+</ol>
+<ul>
+<li>
+<p>事件：<br><br></p>
+<ul>
+<li><strong>ウォール街</strong> の <strong>( <mark>ニューヨーク株式市場</mark> )</strong> で株価が暴落<br>
+→　工業生産急落、企業倒産、商業・貿易不振、金融機関の閉鎖・倒産</li>
+</ul>
+</li>
+<li>
+<p>背景3つ：<br></p>
+<ul>
+<li>
+<p>株や債券などの <strong>( <mark>投機ブーム</mark> )</strong> の過熱</p>
+</li>
+<li>
+<p>世界的な <strong>( <mark>農業不況</mark> )</strong> による農民の購買力の低下</p>
+</li>
+<li>
+<p><strong>( <mark>過剰生産</mark> )</strong> による商品供給の過多</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><br><br></p>
+<ol start="2">
+<li><strong>世界恐慌の拡大により国際関係はどう変化したか。</strong><br>
+<br>
+<ul>
+<li>
+<p>各国は時刻の問題を最優先したため、<strong>国際協調</strong> が後退し、<strong>ファシズム諸国</strong>が台頭した</p>
+</li>
+<li>
+<p>アメリカ、イギリス、フランスは <strong>( <mark>ブロック経済</mark> )</strong> を進めた<br>
+→　自国通貨を軸にして植民地と経済圏をつくり、他国商品を排除する</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><br><br></p>
+<ol start="3">
+<li><strong>ニューディール政策の特徴・内容は何か。</strong><br>
+<br>
+<ul>
+<li>
+<p>民主党の <strong>( <mark>フランクリン＝ローズヴェルト</mark> )</strong> 大統領が <strong>政府による積極的な市場介入</strong> を行った</p>
+<ul>
+<li>
+<p><strong>( <mark>金本位制</mark> )</strong> から離脱　→　銀行救済、金の流出防止</p>
+</li>
+<li>
+<p>農業調整法 <strong>( <mark>AAA</mark> )</strong> →　農産物価格引き上げ、農民の生活安定</p>
+</li>
+<li>
+<p>全国産業復興法 <strong>( <mark>NIRA</mark> )</strong> →　工業製品の価格協定を公認し、産業復興を促進</p>
+</li>
+<li>
+<p>公共事業　→　<strong>( <mark>失業者</mark> )</strong> の減少めざす<br>
+→　テネシー川流域開発公社 <strong>( <mark>TVA</mark> )</strong> など</p>
+</li>
+<li>
+<p><strong>( <mark>ワグナー法</mark> )</strong> →　労働者の<strong>団結権</strong>と<strong>団体交渉権</strong>を承認<br>
+→労働組合の結成を促進、産業別組合会議（CIO） が成立</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><br><br></p>
+<ol start="4">
+<li><strong>ブロック経済は、世界経済にどのような影響をもたらしたか。</strong><br>
+<br></li>
+</ol>
+<ul>
+<li>
+<p>ブロック間の対立によって、通商に頼る中小諸国を苦しめた</p>
+</li>
+<li>
+<p>広大な植民地をもたずブロックを作れないドイツ、イタリア、日本などが拡張主義に向かう要因になった</p>
+</li>
+</ul>
+<p><br><br></p>
+<ol start="5">
+<li><strong>ナチス＝ドイツ政権はどのように成立したか。</strong><br>
+<br></li>
+</ol>
+<ul>
+<li>
+<p>1930年、選挙で <strong>( <mark>ナチス</mark> )</strong> (国民社会主義ドイツ労働者党)と<strong>共産党</strong>が伸長<br>
+→　世界恐慌によるアメリカ資本の撤退で、<strong>失業者増加、労働運動、共産党の勢力拡大への不安</strong> があった</p>
+</li>
+<li>
+<p>1932年、<strong>( <mark>合法的手段</mark> )</strong> である選挙でナチスが第一党となる<br>
+→　ヒンデンブルク大統領がヒトラーを首相に任命</p>
+</li>
+</ul>
+<p><br><br><br></p>
+<ol start="6">
+<li><strong>ナチスの主張について説明せよ。（4つ）</strong><br>
+<br></li>
+</ol>
+<ul>
+<li>ナチスの主張<br>
+①． <strong>( <mark>民族共同体</mark> )</strong> の建設による国民生活の安定<br>
+②． <strong>( <mark>半共産</mark> )</strong> 主義<br>
+③． <strong>( <mark>ヴェルサイユ条約</mark> )</strong> の破棄<br>
+④． <strong>( <mark>ユダヤ人</mark> )</strong> の排除　→　人種差別主義</li>
+</ul>
+<p><br><br><br></p>
+<ol start="7">
+<li><strong>共産党などを解散させ、一党独裁を決定し、立法権を政府に取り込んだ法律は何か。</strong><br>
+<br></li>
+</ol>
+<ul>
+<li><strong>( <mark>全権委任法</mark> )</strong> を成立させ、政府に <strong>( <mark>立法権</mark> )</strong> を委ねさせた</li>
+<li>ナチス以外の政党や労働組合を解散させ、<strong>( <mark>一党独裁</mark> )</strong> を実現した</li>
+</ul>
+<p><br><br><br></p>
+<ol start="8">
+<li><strong>ナチスの統制政策と経済政策を1つずつ説明せよ。</strong><br>
+<br></li>
+</ol>
+<ul>
+<li>
+<p>統制政策：<br></p>
+<ul>
+<li>
+<p><strong>( <mark>教育</mark> )</strong> や <strong>( <mark>文化</mark> )</strong> を含む社会の全領域を厳しく統制</p>
+</li>
+<li>
+<p>政治的反対派は秘密警察 <strong>( <mark>ゲシュタポ</mark> )</strong>、親衛隊（SS）が <strong>( <mark>強制収容所</mark> )</strong> へ送る</p>
+</li>
+<li>
+<p><strong>( <mark>ユダヤ人</mark> )</strong> に対する激しい暴力・差別</p>
+</li>
+</ul>
+ <br>
+</li>
+<li>
+<p>経済政策：<br></p>
+<ul>
+<li>
+<p><strong>( <mark>四ヶ年</mark> )</strong> 計画で <strong>( <mark>軍事工業</mark> )</strong> を拡張</p>
+</li>
+<li>
+<p><strong>( <mark>公共事業</mark> )</strong> による失業者減少（アウトバーン建設など）</p>
+</li>
+<li>
+<p>団体旅行などレクリエーションの組織</p>
+</li>
+<li>
+<p>福祉事業の整備</p>
+</li>
+<li>
+<p>ラジオ放送など大衆娯楽の拡充</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><br><br></p>
+<h2 id="第9週-ファシズム諸国の攻勢と枢軸国の形成">第9週 ファシズム諸国の攻勢と枢軸国の形成 </h2>
+<br>
+<ol>
+<li><strong>ソ連の計画経済は、資本主義諸国にどのような影響を与えたのか。模倣した国はどこか。</strong><br>
+<br></li>
+</ol>
+<ul>
+<li><strong>( <mark>計画経済</mark> )</strong> を採用していたソ連は世界恐慌の打撃をさほど受けず、<strong>( <mark>工業化</mark> )</strong> を推進したので、<strong>( <mark>ナチス＝ドイツ</mark> )</strong>、<strong>( <mark>アメリカ</mark> )</strong>、<strong>( <mark>日本</mark> )</strong> でも導入された</li>
+</ul>
+<p><br><br><br></p>
+<ol start="2">
+<li><strong>ファシズム国家の台頭によりファシズム以外の国はどの国と関係改善されたか？さらにどの国際組織に加盟したか。</strong><br>
+<br></li>
+</ol>
+<ul>
+<li>
+<p>最大の敵が社会主義国ソ連ではなく、<strong>( <mark>ファシズム諸国</mark> )</strong> になった　→　<strong>( <mark>ソ連</mark> )</strong> との関係が改善される</p>
+</li>
+<li>
+<p>アメリカの <strong>( <mark>ローズヴェルト</mark> )</strong> 大統領がソ連を承認し、ソ連は <strong>( <mark>国際連盟</mark> )</strong> に加盟した</p>
+</li>
+</ul>
+<p><br><br><br></p>
+<ol start="3">
+<li><strong>コミンテルンの組織を通して世界に何の戦術を発信したか。</strong><br>
+<br></li>
+</ol>
+<ul>
+<li>反ファシズム各政党が連帯する <strong>( <mark>人民戦線戦術</mark> )</strong> を <strong>( <mark>コミンテルン</mark> )</strong> が世界に呼びかけた</li>
+</ul>
+<p><br><br><br></p>
+<ol start="4">
+<li><strong>3の戦術の内容とそれに関連する事件について説明せよ。</strong><br>
+<br></li>
+</ol>
+<ul>
+<li>
+<p>反ファシズムの立場で、<strong>( <mark>共産党</mark> )</strong> とそれ以外の各政党の連帯を呼びかけた</p>
+</li>
+<li>
+<p>人民戦線戦術</p>
+<ul>
+<li><strong>( <mark>フランス</mark> )</strong> で社会党の <strong>( <mark>ブルム</mark> )</strong> を首相とする <strong>( <mark>人民戦線内閣</mark> )</strong> が成立</li>
+<li><strong>( <mark>スペイン</mark> )</strong> で <strong>( <mark>アサーニャ</mark> )</strong> を首相とする <strong>( <mark>人民戦線政府</mark> )</strong> が成立<br>
+※　内閣・政府の違いに注意！</li>
+</ul>
+</li>
+<li>
+<p><strong>( <mark>スペイン内戦</mark> )</strong> →　人民戦線アサーニャ政府に対する <strong>( <mark>フランコ将軍</mark> )</strong> の反乱</p>
+<ul>
+<li>ドイツ、イタリア　→　フランコ側に軍事支援</li>
+<li>イギリス、フランス　→　<strong>( <mark>不干渉</mark> )</strong> 政策（中立）</li>
+<li>ソ連、<strong>( <mark>国際義勇軍</mark> )</strong> →　アサーニャの人民戦線政府側を支援<br><br>
+→　<strong>( <mark>フランコ将軍</mark> )</strong> が勝利し、総統として独裁者になる</li>
+</ul>
+</li>
+</ul>
+<p><br><br><br></p>
+<ol start="5">
+<li><strong>宥和政策とは何か？具体的内容は？</strong><br>
+<br></li>
+</ol>
+<ul>
+<li>
+<p>イギリスの <strong>( <mark>ネヴィル＝チェンバレン</mark> )</strong> 首相がとった、<strong>( <mark>ナチス＝ドイツ</mark> )</strong> の要求に譲歩する政策</p>
+</li>
+<li>
+<p>宥和政策の詳細<br>
+①．ドイツが<strong>国際連盟を脱退</strong>し、徴兵制復活と <strong>( <mark>再軍備</mark> )</strong> を宣言したのに対し、<strong>( <mark>海軍協定</mark> )</strong> を結んで事実上追認した<br><br>
+②．ドイツが <strong>( <mark>ロカルノ条約</mark> )</strong> を破棄して <strong>( <mark>ラインラント</mark> )</strong> に軍を進駐させた<br>
+　　→　<strong>( <mark>ヴェルサイユ体制</mark> )</strong> の破壊<br><br>
+③．<strong>( <mark>スペイン内戦</mark> )</strong> の際、ドイツ・イタリアがフランコ側に軍事支援を行ったが、イギリス・フランスは <strong>( <mark>不干渉政 策</mark> )</strong> をとった<br><br>
+④．ドイツが <strong>( <mark>オーストリア</mark> )</strong> を併合し、チェコスロヴァキアの <strong>( <mark>ズデーデン地方</mark> )</strong> の割譲を要求<br>
+　　→　<strong>( <mark>ミュンヘン会議</mark> )</strong> でチェコスロヴァキアの出席なしで承認<br><br>
+⑤．ドイツは <strong>( <mark>チェコスロヴァキア</mark> )</strong> を解体し、<strong>( <mark>チェコ</mark> )</strong> をドイツに編入<br>
+　　→　英仏の宥和政策は失敗と認め、ドイツとの戦争準備へ</p>
+</li>
+</ul>
+<br>
+<div class="q">
+<p><strong>宥和政策の順番</strong>（テスト出る！）</p>
+<ol>
+<li>
+<p><strong>( <mark>再軍備</mark> )</strong> を追認</p>
+</li>
+<li>
+<p><strong>( <mark>ラインラント</mark> )</strong> 進駐</p>
+</li>
+<li>
+<p><strong>( <mark>スペイン内戦</mark> )</strong> で <strong>( <mark>不干渉</mark> )</strong> 政策をとる</p>
+</li>
+<li>
+<p><strong>( <mark>ミュンヘン会議</mark> )</strong> でズデーデン地方の割譲を承認</p>
+</li>
+<li>
+<p><strong>( <mark>チェコスロヴァキア</mark> )</strong> 解体　→　宥和政策失敗を認める</p>
+</li>
+</ol>
+</div>
+<br>
+<div class="q">
+<p><strong>国際連盟脱退の順番</strong>（テスト出る！）</p>
+<ol>
+<li>
+<p>1933年　<strong>( <mark>日本</mark> )</strong> 脱退　<br>
+→　満州国が認められなかったから</p>
+</li>
+<li>
+<p>1933年　<strong>( <mark>ドイツ</mark> )</strong> 脱退　<br>
+→　軍備平等権が認められなかったから</p>
+</li>
+<li>
+<p>1937年　<strong>( <mark>イタリア</mark> )</strong> 脱退　<br>
+→　<strong>( <mark>三国防共協定</mark> )</strong> を締結</p>
+</li>
+</ol>
+</div>
+<p><br><br><br></p>
+<ol start="6">
+<li><strong>イギリスはなぜ宥和政策をとったのか？</strong><br>
+<br></li>
+</ol>
+<ul>
+<li>
+<p>イギリス・フランス対ドイツの戦争を回避するため</p>
+</li>
+<li>
+<p>ドイツの矛先が <strong>( <mark>ソ連</mark> )</strong> に向かうことを期待した<br>
+→　ドイツに共産主義の <strong>( <mark>ソ連</mark> )</strong> を倒してほしい</p>
+</li>
+</ul>
+<p><br><br><br></p>
+<ol start="7">
+<li><strong>宥和政策に不信感を強めたソ連はどのような動きを戦争直前に行ったか？</strong><br>
+<br></li>
+</ol>
+<ul>
+<li>
+<p>イギリス・フランスの宥和政策に不信感を強め、<strong>( <mark>ドイツとの提携</mark> )</strong> へ方針転換した<br>
+→　<strong>( <mark>独ソ不可侵条約</mark> )</strong> を締結（秘密議定書が付属）</p>
+</li>
+<li>
+<p>ドイツが <strong>( <mark>ポーランド</mark> )</strong> へ侵攻すると、イギリス・フランスはドイツに宣戦し、<strong>( <mark>第二次世界大戦</mark> )</strong> 開始<br>
+→　イギリス・フランス・ポーランド　対　ドイツ・ソ連</p>
+</li>
+</ul>
+<p><br><br><br></p>
+<h2 id="第10週-第二次世界大戦ヨーロッパ戦線">第10週 第二次世界大戦（ヨーロッパ戦線） </h2>
+<br>
+<ol>
+<li><strong>ソ連は国際連盟から唯一追放された国である。その理由を述べよ。</strong><br>
+<br></li>
+</ol>
+<ul>
+<li>ソ連が安全保障の名目で <strong>( <mark>フィンランド</mark> )</strong> に宣戦して <strong>( <mark>ソ連＝フィンランド</mark> )</strong> 戦争を起こしたから<br>
+→　国連自体が機能不全に陥っていたので除名の効果はなく、フィンランドは国境地帯の領土をソ連に割譲した</li>
+</ul>
+<p><br><br><br></p>
+<ol start="2">
+<li><strong>イタリアのムッソリーニはソ連よりも遅く参戦した。何を見てドイツ側に参戦したか。</strong><br>
+<br></li>
+</ol>
+<ul>
+<li>
+<p>ムッソリーニは、ドイツが <strong>( <mark>フランス</mark> )</strong> に勝利したのを見てドイツ側に参戦した</p>
+</li>
+<li>
+<p>フランス</p>
+<ul>
+<li>北半　→　ドイツが選挙</li>
+<li>南半　→　フランス軍人 <strong>( <mark>ペタン</mark> )</strong> を首班とする<strong>親独</strong>の <strong>( <mark>ヴィシー政府</mark> )</strong> が統治</li>
+<li><strong>( <mark>ド＝ゴール</mark> )</strong> はロンドンに亡命政府（自由フランス政府）を設立<br>
+→　フランス国内では <strong>( <mark>レジスタンス</mark> )</strong> （抵抗）運動が開始された</li>
+</ul>
+</li>
+</ul>
+<p><br><br><br></p>
+<ol start="3">
+<li>
+<p><strong>1941年4月までにドイツが制圧した国を全て挙げよ。独ソ戦はどの地域を制圧した後に準備されたか。</strong><br>
+<br><br>
+１. <strong>( <mark>ポーランド</mark> )</strong>　<br>
+　　→　独ソ不可侵条約でソ連と分割</p>
+<p>２. <strong>( <mark>デンマーク</mark> )</strong><br>
+３. <strong>( <mark>ノルウェー</mark> )</strong><br>
+　→　宥和政策の破綻が明確になり、<strong>対独強硬論</strong>を唱える <strong>( <mark>チャーチル</mark> )</strong> が首相になる</p>
+<p>４. <strong>( <mark>オランダ</mark> )</strong><br>
+５. <strong>( <mark>ベルギー</mark> )</strong></p>
+<p>６. <strong>( <mark>フランス</mark> )</strong>　<br>
+　　→　ヒトラーは <strong>( <mark>独ソ戦</mark> )</strong> の準備開始</p>
+<p>７. <strong>( <mark>ユーゴスラビア</mark> )</strong><br>
+８. <strong>( <mark>ギリシア</mark> )</strong><br>
+　→　バルカン半島へ勢力範囲を拡大、ヨーロッパほぼ全土を支配下へ</p>
+</li>
+</ol>
+<p><br><br><br></p>
+<ol start="4">
+<li><strong>独ソ戦後、宥和政策の失敗の責任をとり失脚したイギリス首相はだれか？次の首相はこの戦争にどう対応したか？1940年から1941年の動きを説明せよ。</strong><br>
+<br></li>
+</ol>
+<ul>
+<li>
+<p>宥和政策の失敗　→　<strong>( <mark>ネヴィル＝チェンバレン</mark> )</strong> にかわって<strong>対独強行派</strong>の <strong>( <mark>チャーチル</mark> )</strong> が就任</p>
+</li>
+<li>
+<p>1940~1941年の動き</p>
+<ul>
+<li>1940年４月　ドイツがデンマーク、ノルウェーに侵攻　→　宥和政策の破綻が明らか</li>
+<li>1940年５月　対独強行派の <strong>( <mark>チャーチル</mark> )</strong> が首相になる</li>
+<li>1940年６月　ドイツがフランスに勝利、ヒトラーは独ソ戦の準備</li>
+<li>1940年８月　ドイツが <strong>( <mark>イギリス上陸作戦</mark> )</strong>（１ヶ月のロンドン空爆）に失敗　→　ドイツの上陸を阻止</li>
+<li>1941年６月　<strong>( <mark>独ソ戦</mark> )</strong> の開始　→　<strong>英ソ</strong>両国は同盟を締結</li>
+<li>1941年３月　アメリカ合衆国が中立の立場から <strong>( <mark>武器貸与法</mark> )</strong> に基づいてイギリス、ソ連に武器、軍需品を供給</li>
+</ul>
+</li>
+</ul>
+<p><br><br><br></p>
+<ol start="5">
+<li>
+<p><strong>アメリカの連合国側参戦で大きな変化が見られた。アイゼンハワーを指揮官として実行した作戦はどの会議で決定したか？この作戦名と結果について説明せよ。</strong><br>
+<br><br></p>
+</li>
+<li>
+<p><strong>枢軸国イタリア・ドイツは、どのような連合軍の攻撃をたどって敗北したか？</strong><br>
+<br><br></p>
+</li>
+</ol>
+<p><br><br><br></p>
+<h2 id="第11週-新しい国際秩序の形成と冷戦へ">第11週 新しい国際秩序の形成と冷戦へ </h2>
+<br>
+<ol>
+<li>
+<p><strong>国際連合憲章の成立過程を説明せよ。</strong><br>
+<br><br><br><br><br></p>
+</li>
+<li>
+<p><strong>ブレトン＝ウッズ体制は何を反省し、どんな目標をたてたか。</strong><br>
+<br><br><br><br><br></p>
+</li>
+<li>
+<p><strong>アメリカ合衆国は全世界で軍事同盟網を構築した目的は何か。</strong><br>
+<br><br><br><br><br></p>
+</li>
+<li>
+<p><strong>核兵器開発競争は世界にどのような影響を与えたか。</strong><br>
+<br><br><br><br><br></p>
+</li>
+<li>
+<p><strong>冷戦の進展は、アメリカ社会・経済にどのような影響を与えたか。</strong><br>
+<br><br><br><br><br></p>
+</li>
+</ol>
+<p><br><br></p>
+<p><a id="print-noanswer" class="print" href="javascript:void(0);"></a></p>
+<p><a id="print-answer" class="print" href="javascript:void(0);"></a></p>
+<br>
+<blockquote>
+<p>修正は <a href="https://github.com/st22182ti/sekaishi/issues">GitHub#issues</a> から</p>
+</blockquote>
+<div style="color:rgba(0,0,0,0.7);font-size:0.8rem;text-align:center;margin-top:5rem;">
+    © mt 2024 All rights reserved
+</div>
+<div id="space"></div>
+<label id="o-header" for="show">
+        <input id="show" class="checkbox" type="checkbox" onchange="show();">
+    <span id="label">&nbsp;&nbsp;&nbsp;&nbsp;解答を全て表示</span>
+</label>
+<iframe style="width:0px;height:0px;opacity:0;" src="https://thomasgreena.blogspot.com/2023/06/blog-post.html" id="access_count"></iframe>
+<script defer="" src="main.js"></script>
+<style>
+    p {
+        margin-top: 2.4em !important;
+        margin-bottom: 3px !important;
+    }
+    u {
+        display: block;
+        padding-bottom: 1em;
+        color: #4c7d59;
+        text-decoration: none;
+    }
+    u::before {
+        content: "Q．";
+    }
+    u::after {
+        content: "\A";
+        white-space: pre;
+    }
+    .info, .q {
+        position: relative;
+        padding: 16px 2.5em;;
+        margin: 24px 0 50px 0;
+        border-radius: 8px;
+        z-index: 0;
+    }
+    .info {
+        background-color: #f0fae9;
+    }
+    .q {
+        background-color: #fbf5e0;
+    }
+    .info::after,
+    .q::after {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        width: 3px;
+        content: "";
+        display: inline-block;
+        border-radius: 8px;
+        z-index: 1;
+    }
+    .info::after {
+        background-color: #66cb1b;
+    }
+    .q::after {
+        background-color: #e0af00;
+    }
+</style>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
